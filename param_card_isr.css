@@ -1,0 +1,191 @@
+/*Dado que todo el texto de la página se quiere que tenga esta tipografía "Lato", entonces se configura la opción de la fuente de la letra en el body, dado que el body contiene TODO lo que se encuentra dentro de la página web*/
+body{
+    font-family: 'Lato', sans-serif; /*Esta es la opción que botaba la página para poder usar la fuente en css, como se mostró en la descripción del código html*/
+    background: #e6ffe6;
+}
+
+/*Se hace que TODOS los h2 en la página tengan un grosor de 400 (regular 400 escogido en la página de Google fonts)*/
+h2{
+    font-weight: 400;
+    color: #D0E799 ;
+}
+
+/*Se hace que TODOS los párrapos (p) en la página tengan un grosor de 300 (light 300 escogido en la página de Google fonts)*/
+p{
+    font-weight: 300;
+    text-align: left;
+}
+
+header>div{
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    background: #25271E; 
+    color:#FBEFF4;
+    border: 1px solid #D8C358; 
+    border-radius: 5px; 
+    margin: 0px auto; 
+    margin-bottom: 20px;
+    padding: 10px; 
+    box-shadow: 10px 10px 5px #888;
+    width: 30%; 
+    box-sizing: border-box;  
+}
+
+.contenedor_subtitulos{
+    margin: 0px auto;
+    width: 88%; 
+}
+
+.subtitulos{
+    font-weight: 400;
+    font-size: 20px;
+    background: #25271E; 
+    color:#FBEFF4;
+    border: 1px solid #D8C358; 
+    border-radius: 5px; 
+    padding: 10px; 
+    box-shadow: 10px 10px 5px #888; 
+}
+
+/*Modifica las propiedades del contenedor (el elemento que contiene los 4 cuadros)*/
+.contenedor{
+    margin: 0px auto; /* Se hace que el contenedor de los cuatro cuadros de información no tenga márgenes arriba y abajo (no hay espacio entre lo que hay arriba de este contenedor (no hay nada arriba) y abajo) pero que tenga una margen "auto" (automática) a los lados, de esta forma la distancia entre el contenedor y las paredes laterales de la página (las márgenes laterales, en otras palabras) se va adaptando dependiendo de lo que tenga el contenedor. Esta opción sirve perfecto si se quiere que el contenedor siempre quede centrado horizontalmente.*/
+    width: 90%; /*Se exige que el contenedor tenga un ancho del 90% de la página. Este ancho también se puede poner en pixeles pero en este caso es más fácil imaginarlo por porcentajes.*/
+}
+
+/*Hace uso de flexbox para organizar los elementos dentro del contenedor de la forma en que queramos*/
+.flex{
+    display: flex; /*hacemos uso de flexbox para manejar todo lo que contiene el contenedor a nuestro antojo*/
+    flex-direction: row; /*Permite que todo lo que se encuentre dentro del contenedor, se ubique en forma de fila (una cosa allado de la otra horizontalmente)*/
+    flex-wrap: wrap; /*Esta propiedad permite que, de ser necesario, los elementos dentro del contenedor no se queden en una sola fila obligatoriamente sino que puedan ser repartidos en varias. Esta propiedad es útil para cuando el tamaño de la ventana se achica y se necesite no poner las 4 columnas en la misma línea sino que se vayan adaptando al tamaño de la ventana (esto a través del uso del mediaquery)*/
+}
+
+/*Centrar texto*/
+.text-center{
+    text-align: center; /*Permite que el texto del elemento que tenga la clase "text-center" esté centrado*/
+}
+
+.imagenes{
+    padding: 10px;
+}
+
+.dos_imagenes{
+    padding: 10px;
+    display: block;
+}
+
+
+.contenido{
+    text-align: left;
+    background: #25271E; 
+    color:#FBEFF4;
+    border: 1px solid #D8C358; 
+    border-radius: 5px; 
+    margin: 0px auto; 
+    margin-bottom: 20px;
+    padding: 10px; 
+    box-shadow: 10px 10px 5px #888;
+    width: 88%; 
+    box-sizing: border-box;  
+}
+
+.contenedor_codigo{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor_descripcion{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.centrar_codigo_div{
+    text-align: left;
+    color: #D8C358;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    white-space: pre-line;
+}
+
+.tablas{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tablas > table,th,td{
+    color: #25271E;
+    border: 2px solid #25271E;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+
+table{
+    margin-bottom: 10px;
+}
+
+th{
+    background: #D0E799;
+    padding: 5px;
+}
+
+td{
+    background: #e6ffe6;
+    text-align: justify;
+    padding: 10px;
+}
+
+.columna{
+    background: #25271E; /*Color de fondo de cada columna*/
+    color:#FBEFF4; /*Color de letra de cada columna*/
+    border: 1px solid #D8C358; /*Cada columna tendra una línea de borde, que es de grosor 1px, es una línea sólida (contínua) y tiene color #333, como la letra*/
+    border-radius: 5px; /*Se aplica un redondeado a los bordes de 5px. Entre más grande el radio, más redondeados son los bordes*/
+    margin: 0px auto; /*Este margen se pone con el fin de que haya un espacio (automático) entre una columna y otra*/
+    margin-bottom: 20px;
+    padding: 10px; /*Este padding (que se aplica a todos los lados) se hace con el fin de que ni el texto ni las líneas horizontales que separan el texto en cada columna se toquen con el borde de la columna*/
+    box-shadow: 10px 10px 5px #888; /*Se crea la sombra apra cada columna. El primer parámetro es el tamaño de la sombra en el eje horizontal (si el número es positivo la sombra será a la derecha y si es negativo será a al izquierda). El segundo parámetro es el tamaño de la sombra en el eje vertical (numero positivo es sombra hacia abajo y número negativo hacia arriba).El tercer parámetro se usa para que los bordes de las sombras no sean tan bien definidos sino que sean borrosos o indistinguibles (entre más grande este número, más borroso o indistinguible es el borde de la sombra) .El cuarto parámetro es el color de la sombra*/
+    width: 48%; /*Es el ancho aproximado que tiene cada columna. Si el ancho total de la página (100%) se reparte en 4 columnas, entonces cada columna tendrá el 48%. Sin embargo el número puesto es un poco menor dado que también al ancho de la columna aporta el tamaño de las sombras, por lo que no es un 25% cerrado sino un poco menos. Se puede calcular a ojo.*/
+    box-sizing: border-box; /*Esta propiedad se usa para que, si se una una margen o padding "auto" (como en este caso), se tengan en cuenta propiedades como el "width" (puesto justo antes de esta propiedad) para que cada columna se ajuste debidamente. Es simplemente para que el "auto" en los márgenes o el padding tengan en cuenta todos los paámetros posibles y pueda ser bien calculado. Si esta propiedad no se añade es probable que el valor "auto" no se calcule bien y las columnas queden pegadas cuando las cuatro estén juntas en línea*/
+}
+
+/*Propiedades de los enlaces de comprar (botón)*/
+.btn-referencia{
+    /*background: #6D0839;*/
+    display: inline-block; /*Se convierte al enlace en un elemento de bloque, de tal forma que no haya ningún elemento a su derecha o su izquiera */
+    padding: 2px; /*Se amplía el fondo en 10px a cada lado*/
+    color: #FBEFF4; /*Color de letra blanco*/
+    text-decoration: none; /*Se quita el decorado del enlace (se quita el subrayado)*/
+    border-radius: 3px; /*Se agrega un redondeado de las esquinas de 3px*/
+}
+
+/*Al botón también se le agrega la opción de que, cuando el puntero del mouse se sitúe sobre el, este cambie de color de fondo*/
+.btn-referencia:hover{
+    background: #D0E799;
+    color: #25271E;
+}
+
+
+/*Se usa mediaquery para poder modificar la apariencia del sitio a medida que este cambie de tamaño*/
+@media (max-width: 1070px){
+    .columna{
+        width: 45%; /* Si el ancho de la ventana es menor o igual a 1070px, entonces el ancho de cada columna ya no será del 23% sino del 45%, para que en vez de 4 columnas en una sola línea solo aparezcan 2 (y las otras dos abajo de estas)*/
+        margin-bottom: 20px; /* Se agrega un margen en la parte de abajo de cada columna para separar un poco las dos columnas superiores con las dos inferiores*/
+    }
+}
+
+@media (max-width: 600px){
+    .columna{
+        width: 95%; /* Si el ancho de la ventana es menor o igual a 600px, entonces el ancho de cada columna ya no será del 45% sino del 95%, para que en vez de 2 columnas en una línea y 2 en la siguiente, aparezca 1 sola en una línea (y las otras tres abajo de la primera columna)*/
+        margin-bottom: 20px; /* Se agrega un margen en la parte de abajo de cada columna para separar un poco las columnas*/
+    }
+}
