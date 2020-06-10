@@ -1,0 +1,21 @@
+import model MSSM_SLHA2
+define lepton = e+ e- mu+ mu- ta+ ta-
+define taus = ta+ ta-
+define neutrino = ve vm vt ve~ vm~ vt~
+define neutrino_tau = vt
+define chargino = x1+ x1-
+define colored = go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl~ dr~ ul~ ur~ sl~ sr~ cl~ cr~ b1~ b2~ t1~ t2~
+define p = u d u~ d~
+generate p p > x1+ x1- j $$ w+ w- z a h01 h2 h3 h+, (chargino > taus neutrino_tau n1)
+add process p p > n2 chargino j $$ w+ w- z a h01 h2 h3 h+, (chargino > taus neutrino_tau n1) , (n2 > taus taus n1)
+add process p p > n2 n2 j $$ w+ w- z a h01 h2 h3 h+,(n2 > taus taus n1)
+add process p p > n1 chargino j $$ w+ w- z a h01 h2 h3 h+, (chargino > taus neutrino_tau n1)
+output FOLDEREVENTS/SUBFOLDERNAME_SEED -f
+launch -m
+NUMBERCORES
+shower = Pythia8
+detector = Delphes
+FOLDEREVENTS/ParamCard/param_card.dat
+FOLDEREVENTS/Cards/run_card.dat
+FOLDEREVENTS/Cards/pythia8_card.dat
+FOLDEREVENTS/Cards/delphes_card.dat
