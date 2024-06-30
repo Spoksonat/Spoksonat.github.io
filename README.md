@@ -7,7 +7,6 @@ modelo MSSM_SLHA2 en MadGraph.
 
 - [Acerca del Proyecto](#acerca-del-proyecto)
 - [Uso](#uso)
-- [ToDo](#todo)
 - [Contribuyendo](#contribuyendo)
 - [Licencia](#licencia)
 - [Contacto](#contacto)
