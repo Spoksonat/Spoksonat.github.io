@@ -41,4 +41,4 @@ Distribuido bajo la Licencia MIT. Consulta [LICENSE.txt](LICENCE.txt) para más 
 
 Manuel Fernando Sánchez Alarcón  - mf.sanchez17@uniandes.edu.co
 
-Enlace al Proyecto: [https://github.com/Spoksonat/Laboratorios-Docencia](https://github.com/Spoksonat/Laboratorios-Docencia)
+Enlace al Proyecto: [https://github.com/Spoksonat/Spoksonat.github.io](https://github.com/Spoksonat/Spoksonat.github.io)
